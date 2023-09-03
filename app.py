@@ -14,10 +14,10 @@ import imutils
 #instatiate flask app  
 app = Flask(__name__)
 
-cap = cv2.VideoCapture(0)
 detector = HandDetector(detectionCon=0.8)
 
 def gen_frames():
+    cap = cv2.VideoCapture(0)
     class MCQ():
         def __init__(self, data):
             self.question = data[0]
